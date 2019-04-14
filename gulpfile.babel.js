@@ -48,11 +48,11 @@ const webpackConfig = require("./webpack.config.js"),
 			]
 		},
 		styles: {
-			src: "./src/styles/main.scss",
+			src: "./src/styles/main.sass",
 			dist: "./dist/styles/",
 			watch: [
-				"./src/blocks/**/*.scss",
-				"./src/styles/**/*.scss"
+				"./src/blocks/**/*.sass",
+				"./src/styles/**/*.sass"
 			]
 		},
 		scripts: {
@@ -123,7 +123,7 @@ export const serverConfig = () => gulp.src(paths.server_config.src)
 
 export const smartGrid = cb => {
 	smartgrid("./src/styles/vendor", {
-		outputStyle: "scss",
+		outputStyle: "sass",
 		filename: "_smart-grid",
 		columns: 12, // number of grid columns
 		offset: "30px", // gutter width
